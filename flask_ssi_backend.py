@@ -1,12 +1,16 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import json
 import datetime
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import padding, rsa
 
+
 app = Flask(__name__)
+CORS(app)
 
 # In-memory storage for demo purposes
+
 users = {}
 
 # ---------------------------
@@ -124,6 +128,6 @@ def api_get_user_info():
 @app.route('/')
 def home():
     return "Flask SSI Backend is running."
-
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
+
