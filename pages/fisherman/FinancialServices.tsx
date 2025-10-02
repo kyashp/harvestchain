@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { Card } from '../../components/ui/Card';
 import { InsurancePolicy, User } from '../../types';
 import { api } from '../../services/mockApiService';
-import { getCreditScore } from '../../services/geminiService';
+import { getCreditScore } from '../../services/aiService';
 import { Spinner } from '../../components/ui/Spinner';
 
 

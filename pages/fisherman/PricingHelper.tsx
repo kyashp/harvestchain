@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card } from '../../components/ui/Card';
 import { Spinner } from '../../components/ui/Spinner';
-import { getFishPriceRecommendation } from '../../services/geminiService';
+import { getFishPriceRecommendation } from '../../services/aiService';
 
 
 export const PricingHelper: React.FC = () => {

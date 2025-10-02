@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Card } from '../../components/ui/Card';
 import { Spinner } from '../../components/ui/Spinner';
-import { getCreditScore } from '../../services/geminiService';
+import { getCreditScore } from '../../services/aiService';
 import { api } from '../../services/mockApiService';
 import { CreditScoreData, User } from '../../types';
 
