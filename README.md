@@ -3,6 +3,10 @@
 
 <div align="center">
    
+   ![HarvestChain Demo](https://raw.githubusercontent.com/kyashp/harvestchain/main/demo/demo.gif)
+</div>
+<div align="center">
+   
    [![Introduction](https://img.shields.io/badge/Introduction-blue)](#introduction)
    [![Features](https://img.shields.io/badge/Features-green)](#features)
    [![Technologies](https://img.shields.io/badge/Technologies-orange)](#technologies)
@@ -87,4 +91,4 @@ In git bash or other terminal:
 - [@sanjey99](https://github.com/sanjey99)
 - [@ongxinchun](https://github.com/ongxinchun)
 - [@thecalebloo](https://github.com/thecalebloo)
-- [@leejiajunisaac](https://github.com/leejiajunisaac)
+- [@leejiajunisaac](https://github.com/leejiajunisaac-svg)
