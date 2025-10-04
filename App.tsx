@@ -9,13 +9,34 @@ const App: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleLogin = async (email: string, type: UserType) => {
+  const handleLogin = async (email: string, type: UserType, password?: string, name?: string) => {
     setIsLoading(true);
-    const loggedInUser = await api.login(email, type);
-    if (loggedInUser) {
-      setUser(loggedInUser);
+    try {
+      if (password && name) {
+        // Registration flow
+        const response = await fetch('/api/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password, type, name }),
+        });
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.error || 'Registration failed');
+        }
+      }
+      // Login flow
+      const loggedInUser = await api.login(email, type);
+      if (loggedInUser) {
+        setUser(loggedInUser);
+      }
+    } catch (error) {
+      console.error('Error during login or registration:', error);
+      alert(error instanceof Error ? error.message : 'An error occurred');
+    } finally {
+      setIsLoading(false);
     }
-    setIsLoading(false);
   };
 
   const handleLogout = () => {

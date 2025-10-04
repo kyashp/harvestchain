@@ -1,0 +1,120 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "MockAIOracle",
+  "sourceName": "src/oracles/MockAIOracle.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "conf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "floor",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "marketKey",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getFloorPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "marketKey",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pricePerUnit",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "confidence",
+          "type": "uint256"
+        }
+      ],
+      "name": "set",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "ts",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080806040523461001657610182908161001c8239f35b600080fdfe6040608081526004908136101561001557600080fd5b600091823560e01c8063359c351d146101135780635ca0e7a4146100ed578063b831e65b146100c6578063d15d2587146100825763dd873ef81461005857600080fd5b3461007e57602036600319011261007e5760209282913581526001845220549051908152f35b8280fd5b503461007e57602036600319011261007e57916060923581528060205281812054916001602052808083205492600260205220549181519384526020840152820152f35b503461007e57602036600319011261007e5760209282913581526002845220549051908152f35b503461007e57602036600319011261007e57602092829135815280845220549051908152f35b503461007e57606036600319011261007e5735825281602052602435818320556001602052604435818320556002602052429082205580f3fea26469706673582212200931a400f94cd5876f8c8b11453f2b981b4eb60112ed3bcb4a6651f3034d3d4c64736f6c63430008180033",
+  "deployedBytecode": "0x6040608081526004908136101561001557600080fd5b600091823560e01c8063359c351d146101135780635ca0e7a4146100ed578063b831e65b146100c6578063d15d2587146100825763dd873ef81461005857600080fd5b3461007e57602036600319011261007e5760209282913581526001845220549051908152f35b8280fd5b503461007e57602036600319011261007e57916060923581528060205281812054916001602052808083205492600260205220549181519384526020840152820152f35b503461007e57602036600319011261007e5760209282913581526002845220549051908152f35b503461007e57602036600319011261007e57602092829135815280845220549051908152f35b503461007e57606036600319011261007e5735825281602052602435818320556001602052604435818320556002602052429082205580f3fea26469706673582212200931a400f94cd5876f8c8b11453f2b981b4eb60112ed3bcb4a6651f3034d3d4c64736f6c63430008180033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

@@ -1,0 +1,67 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "MockDeliveryOracle",
+  "sourceName": "src/oracles/MockDeliveryOracle.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "delivered",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "isDelivered",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "v",
+          "type": "bool"
+        }
+      ],
+      "name": "setDelivered",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080806040523461001657610105908161001c8239f35b600080fdfe608060408181526004361015601357600080fd5b600091823560e01c9081634b5e41081460a757508063b5df70d414606c5763dcdb69d214603f57600080fd5b34606857602036600319011260685760ff81602093600435815280855220541690519015158152f35b5080fd5b5034606857806003193601126068576024359081151580920360a35760043583528260205282209060ff8019835416911617905580f35b8280fd5b9190503460a357602036600319011260a3576004358352602083815292205460ff1615158152f3fea26469706673582212202454e44e26ba21dfebda97c5e79b20b3bfbc51b87d1694f1b6ff7fbaef529f3064736f6c63430008180033",
+  "deployedBytecode": "0x608060408181526004361015601357600080fd5b600091823560e01c9081634b5e41081460a757508063b5df70d414606c5763dcdb69d214603f57600080fd5b34606857602036600319011260685760ff81602093600435815280855220541690519015158152f35b5080fd5b5034606857806003193601126068576024359081151580920360a35760043583528260205282209060ff8019835416911617905580f35b8280fd5b9190503460a357602036600319011260a3576004358352602083815292205460ff1615158152f3fea26469706673582212202454e44e26ba21dfebda97c5e79b20b3bfbc51b87d1694f1b6ff7fbaef529f3064736f6c63430008180033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

@@ -1,0 +1,308 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\sanje\\Downloads\\harvestchain-1\\contracts\\src\\core\\HarvestChainEscrowAI.sol": {
+      "lastModificationDate": 1759288315926,
+      "contentHash": "127339e7185cce054af2de28ae943c45",
+      "sourceName": "src/core/HarvestChainEscrowAI.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "HarvestChainEscrowAI",
+        "IAIPriceOracle",
+        "ICreditScoreOracle",
+        "IDeliveryOracle",
+        "IERC20",
+        "ISSIRegistry",
+        "ReentrancyGuard",
+        "SafeERC20"
+      ]
+    },
+    "C:\\Users\\sanje\\Downloads\\harvestchain-1\\contracts\\src\\credit\\CreditScoreOracle.sol": {
+      "lastModificationDate": 1759288980989,
+      "contentHash": "850e7245aafe3a772d19625ef90afc37",
+      "sourceName": "src/credit/CreditScoreOracle.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "CreditScoreOracle"
+      ]
+    },
+    "C:\\Users\\sanje\\Downloads\\harvestchain-1\\contracts\\src\\oracles\\IAIPriceOracle.sol": {
+      "lastModificationDate": 1759288987936,
+      "contentHash": "18453c165fc0a744ef38813adf686470",
+      "sourceName": "src/oracles/IAIPriceOracle.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "IAIPriceOracle"
+      ]
+    },
+    "C:\\Users\\sanje\\Downloads\\harvestchain-1\\contracts\\src\\oracles\\IDeliveryOracle.sol": {
+      "lastModificationDate": 1759289005083,
+      "contentHash": "8566fd39306de7bd196e826a5e0ee4fe",
+      "sourceName": "src/oracles/IDeliveryOracle.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "IDeliveryOracle"
+      ]
+    },
+    "C:\\Users\\sanje\\Downloads\\harvestchain-1\\contracts\\src\\oracles\\MockAIOracle.sol": {
+      "lastModificationDate": 1759289012816,
+      "contentHash": "e4124e6152abca8ce9a5ce62a7ffc115",
+      "sourceName": "src/oracles/MockAIOracle.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "MockAIOracle"
+      ]
+    },
+    "C:\\Users\\sanje\\Downloads\\harvestchain-1\\contracts\\src\\oracles\\MockDeliveryOracle.sol": {
+      "lastModificationDate": 1759289019449,
+      "contentHash": "6b9dec72ba27f930e2e1f69ec71ba8a8",
+      "sourceName": "src/oracles/MockDeliveryOracle.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "MockDeliveryOracle"
+      ]
+    },
+    "C:\\Users\\sanje\\Downloads\\harvestchain-1\\contracts\\src\\ssi\\SSIRegistry.sol": {
+      "lastModificationDate": 1759288973254,
+      "contentHash": "02315917b8a4f85a9e00f852a6d5ccd5",
+      "sourceName": "src/ssi/SSIRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "SSIRegistry"
+      ]
+    },
+    "C:\\Users\\sanje\\Downloads\\harvestchain-1\\contracts\\src\\mocks\\MockUSD.sol": {
+      "lastModificationDate": 1759295446081,
+      "contentHash": "5a634d040c22523b74a47f4bfb1056fa",
+      "sourceName": "src/mocks/MockUSD.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "MockUSD"
+      ]
+    }
+  }
+}

@@ -22,15 +22,50 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, isLoading }) => {
   const [walletAddress, setWalletAddress] = useState('');
   const [file, setFile] = useState<File | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isRegistering, setIsRegistering] = React.useState(false);
+  const [errorMessage, setErrorMessage] = React.useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    onLogin(emailOrPhone, userType);
+    setErrorMessage('');
+    setIsRegistering(true);
+    try {
+      await onLogin(emailOrPhone, userType, password, fullName);
+    } catch (error: any) {
+      setErrorMessage(error.message || 'Login failed');
+    } finally {
+      setIsRegistering(false);
+    }
   };
-  
-  const handleFishermanRegister = () => {
-    // Simulate login after mock registration
-    onLogin('tom@harvestchain.com', UserType.FISHERMAN);
-  }
+
+  const handleFishermanRegister = async () => {
+    setErrorMessage('');
+    setIsRegistering(true);
+    try {
+      const response = await fetch('http://localhost:5000/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          password,
+          type: UserType.FISHERMAN,
+          name: fullName,
+        }),
+      });
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Registration failed');
+      }
+      // On success, log in the user
+      await onLogin(email, UserType.FISHERMAN, password, fullName);
+    } catch (error: any) {
+      setErrorMessage(error.message || 'Registration failed');
+    } finally {
+      setIsRegistering(false);
+    }
+  };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
@@ -137,10 +172,12 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, isLoading }) => {
                     Sign up with Philsys
                   </button>
                   <button
-                    type="submit"
-                    className="w-full flex justify-center mt-4 py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    type="button"
+                    disabled={isRegistering}
+                    onClick={handleFishermanRegister}
+                    className="w-full flex justify-center mt-4 py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:bg-blue-300"
                   >
-                    Create Fisherman Account
+                    {isRegistering ? 'Registering...' : 'Create Fisherman Account'}
                   </button>
                 </form>
              </>
@@ -212,9 +249,10 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, isLoading }) => {
                 />
                 <button
                   type="submit"
-                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  disabled={isRegistering}
+                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:bg-blue-300"
                 >
-                  Create Buyer Account
+                  {isRegistering ? 'Registering...' : 'Create Buyer Account'}
                 </button>
               </form>
           )}

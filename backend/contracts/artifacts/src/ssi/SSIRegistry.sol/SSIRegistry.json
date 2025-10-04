@@ -1,0 +1,131 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "SSIRegistry",
+  "sourceName": "src/ssi/SSIRegistry.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_verifier",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "until",
+          "type": "uint64"
+        }
+      ],
+      "name": "Authorized",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "authorizedUntil",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        }
+      ],
+      "name": "isAuthorized",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint64",
+          "name": "until",
+          "type": "uint64"
+        }
+      ],
+      "name": "setAuthorized",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "verifier",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x60803461007457601f6102fb38819003918201601f19168301916001600160401b038311848410176100795780849260209460405283398101031261007457516001600160a01b0381169081900361007457600080546001600160a01b03191691909117905560405161026b90816100908239f35b600080fd5b634e487b7160e01b600052604160045260246000fdfe60806040818152600436101561001457600080fd5b600091823560e01c9081632b7ac3f3146101f657508063d6d60455146101ab578063de11892b1461015d5763e06932221461004e57600080fd5b346101595760603660031901126101595761006761021a565b90602435916044359067ffffffffffffffff82168092036101555784546001600160a01b0391908216330361012257428311156100f15716808552600160209081528386208587528152838620805467ffffffffffffffff1916841790559251918252917f76239485e523292bbef8d8e0fcaf20ca57d8bbb12fcd7a1ca3e19e323a58aac991a380f35b835162461bcd60e51b815260206004820152600a6024820152696261642065787069727960b01b6044820152606490fd5b835162461bcd60e51b815260206004820152600c60248201526b3737ba103b32b934b334b2b960a11b6044820152606490fd5b8480fd5b5080fd5b503461015957806003193601126101595760209167ffffffffffffffff9082906001600160a01b0361018d61021a565b16815260018552818120602435825285522054169051904211158152f35b503461015957806003193601126101595760209167ffffffffffffffff9082906001600160a01b036101db61021a565b16815260018552818120602435825285522054169051908152f35b83903461015957816003193601126101595790546001600160a01b03168152602090f35b600435906001600160a01b038216820361023057565b600080fdfea2646970667358221220596c5554ac255b0856b9d8707434377be317b56ff43dc62a18f7892faa57adfd64736f6c63430008180033",
+  "deployedBytecode": "0x60806040818152600436101561001457600080fd5b600091823560e01c9081632b7ac3f3146101f657508063d6d60455146101ab578063de11892b1461015d5763e06932221461004e57600080fd5b346101595760603660031901126101595761006761021a565b90602435916044359067ffffffffffffffff82168092036101555784546001600160a01b0391908216330361012257428311156100f15716808552600160209081528386208587528152838620805467ffffffffffffffff1916841790559251918252917f76239485e523292bbef8d8e0fcaf20ca57d8bbb12fcd7a1ca3e19e323a58aac991a380f35b835162461bcd60e51b815260206004820152600a6024820152696261642065787069727960b01b6044820152606490fd5b835162461bcd60e51b815260206004820152600c60248201526b3737ba103b32b934b334b2b960a11b6044820152606490fd5b8480fd5b5080fd5b503461015957806003193601126101595760209167ffffffffffffffff9082906001600160a01b0361018d61021a565b16815260018552818120602435825285522054169051904211158152f35b503461015957806003193601126101595760209167ffffffffffffffff9082906001600160a01b036101db61021a565b16815260018552818120602435825285522054169051908152f35b83903461015957816003193601126101595790546001600160a01b03168152602090f35b600435906001600160a01b038216820361023057565b600080fdfea2646970667358221220596c5554ac255b0856b9d8707434377be317b56ff43dc62a18f7892faa57adfd64736f6c63430008180033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
